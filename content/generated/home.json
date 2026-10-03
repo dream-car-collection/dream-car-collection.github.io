@@ -1,0 +1,273 @@
+{
+  "enabled": true,
+  "slug": "",
+  "pageType": "home",
+  "title": "Dream Car Collection Wiki – Codes, Cars & Roblox Guide",
+  "description": "Dream Car Collection Wiki for Roblox with current codes, how to play, Lucky Crates, offline money, cars, and the Drive World update.",
+  "keywords": [
+    "dream car collection wiki",
+    "dream car collection roblox",
+    "dream car collection guide",
+    "dream car collection codes",
+    "dream car collection cars"
+  ],
+  "primaryKeyword": "dream car collection wiki",
+  "secondaryKeywords": [
+    "dream car collection roblox",
+    "dream car collection guide",
+    "roblox dream car collection",
+    "dream car collection game",
+    "dream car collection codes",
+    "dream car collection cars"
+  ],
+  "searchIntent": "Understand the Roblox game and find codes, gameplay, crates, offline income, cars, and the driving update.",
+  "priority": "P0",
+  "navVisible": true,
+  "wordCountTarget": 1400,
+  "hero": {
+    "eyebrow": "Roblox Game Wiki",
+    "heading": "Dream Car Collection Wiki",
+    "lead": "Dream Car Collection is a Roblox vehicle-collection game by F Students = Inventors. Open Lucky Crates for cars, add them to your Collection to generate money while offline, race friends, and use current codes for useful boosts.",
+    "supportingText": "Find Codes, Drive World, How to Play, Lucky Crates, Offline Money, and Cars in one place. The game is in beta, so check live menus and values as you explore its collection and driving features.",
+    "primaryLink": {
+      "slug": "codes",
+      "label": "View Current Codes"
+    },
+    "secondaryLink": {
+      "label": "Play on Roblox",
+      "url": "https://www.roblox.com/games/76841016201110"
+    }
+  },
+  "sections": [
+    {
+      "id": "what-is-dream-car-collection-on-roblox",
+      "heading": "What Is Dream Car Collection on Roblox?",
+      "paragraphs": [
+        "Dream Car Collection is a Simulation game in Roblox’s Vehicle Sim category, made by F Students = Inventors. Its central idea is to turn Lucky Crates into cars and build a Collection that generates money, including while you are offline.",
+        "The official beginner loop has four parts: spawn and buy a Lucky Crate, place and open it for a car, add the car to your Collection to start earning, and keep going toward your dream cars. Those steps make the game easier to understand than a list of isolated menus.",
+        "The Roblox description also advertises all-or-nothing races with friends, ASMR Car Cleaning, and 5+ Car Edits. These give you activities beyond collecting. Car Shows are described as coming soon, so treat them as a future feature rather than an activity this guide tells you to start now.",
+        "The game is labeled beta. Menus, codes, and balance values can change, so use this wiki for the confirmed sequence and the live game for the details shown in your own session."
+      ],
+      "links": [
+        {
+          "slug": "how-to-play",
+          "label": "Start with the beginner guide"
+        }
+      ]
+    },
+    {
+      "id": "dream-car-collection-codes",
+      "heading": "Dream Car Collection Codes",
+      "paragraphs": [
+        "Current codes offer several different rewards. 100XHATCH gives a timed Hatch Speed boost, LARP gives Crate Luck Potions, RELEASE gives an Everything Potion, and DISCORDWELCOME gives Gems. Use the reward names to distinguish a speed boost from luck or currency.",
+        "Redeem inside the game: open the Store / Premium Shop, find Codes, enter one code, and press Redeem. Read the result before moving to the next code. An expired code, an already claimed reward, and a typing mistake can produce different messages."
+      ],
+      "table": {
+        "caption": "Current codes snapshot — October 3, 2026",
+        "columns": [
+          "Code",
+          "Reward"
+        ],
+        "rows": [
+          [
+            "100XHATCH",
+            "100x Hatch Speed for 1 hour"
+          ],
+          [
+            "LARP",
+            "3 Crate Luck Potions"
+          ],
+          [
+            "RELEASE",
+            "1 Everything Potion"
+          ],
+          [
+            "DISCORDWELCOME",
+            "100 Gems"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "slug": "codes",
+          "label": "See all current codes and redemption steps"
+        }
+      ]
+    },
+    {
+      "id": "how-to-play-dream-car-collection",
+      "heading": "How to Play Dream Car Collection",
+      "paragraphs": [
+        "If you have just joined, complete the four-step loop once before worrying about a full roster or the best way to spend every reward. It gives you a clear next action after each purchase and opening."
+      ],
+      "subsections": [
+        {
+          "heading": "Buy a Lucky Crate",
+          "paragraphs": [
+            "Spawn and buy a Lucky Crate as described in the official instructions. Check the current purchase screen before buying, because the beta’s live price is what matters for your session."
+          ]
+        },
+        {
+          "heading": "Place and Open the Crate",
+          "paragraphs": [
+            "Place the crate and open it for a car. The purchase gives you the crate; the opening supplies the vehicle. Follow the current game prompts rather than an old screenshot of a menu."
+          ]
+        },
+        {
+          "heading": "Add the Car to Your Collection",
+          "paragraphs": [
+            "Add the newly obtained vehicle to the Collection to start earning money. This step connects obtaining cars with progression, so finish it after an opening."
+          ]
+        },
+        {
+          "heading": "Keep Building Your Dream Car Collection",
+          "paragraphs": [
+            "Return to your current Collection and money display, then decide whether to repeat the process. Keep working toward cars you want without assuming a guaranteed crate result or a permanent income formula."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "slug": "how-to-play",
+          "label": "Follow the complete how-to-play guide"
+        }
+      ]
+    },
+    {
+      "id": "drive-world-update",
+      "heading": "Drive World Update",
+      "paragraphs": [
+        "The official Roblox event is called DRIVE WORLD. It announces an entirely new massive map, says all 67 cars are drivable, and advertises x3 Hatch Speed while driving. Roblox lists the event for October 2–4, 2026.",
+        "This adds a driving-focused activity alongside the car-collection loop. The driving condition belongs to the Hatch Speed bonus; it is not a published formula for car odds or a guarantee that a potion multiplies the event bonus.",
+        "Check the official game page for current event access. The announced dates give the event window, but they do not establish that its map or bonus will remain permanently available after October 4."
+      ],
+      "links": [
+        {
+          "slug": "drive-world",
+          "label": "Explore the Drive World update"
+        }
+      ]
+    },
+    {
+      "id": "lucky-crates-and-your-car-collection",
+      "heading": "Lucky Crates and Your Car Collection",
+      "paragraphs": [
+        "Lucky Crates are the official starting point for getting cars. Buying, placing, and opening a crate leads to a vehicle, and adding that vehicle to your Collection starts the earning step. These actions belong to one connected progression loop.",
+        "LARP’s luck boost and 100XHATCH’s speed reward can be relevant to a crate session, but their names should not be treated as a hidden probability table. Read the current effect information in the game before using a reward.",
+        "For purchase decisions, look at the live Store or crate interface. The public description does not publish a permanent price-and-odds table, so this wiki does not assign invented prices, tiers, or vehicle drop rates."
+      ],
+      "links": [
+        {
+          "slug": "lucky-crates",
+          "label": "Read the Lucky Crates guide"
+        }
+      ]
+    },
+    {
+      "id": "how-offline-money-works",
+      "heading": "How Offline Money Works",
+      "paragraphs": [
+        "The developer explicitly confirms that money generates while you are offline. The official how-to-play sequence identifies adding a car to the Collection as the point where earning starts. Together, those statements explain why the Collection matters between active sessions.",
+        "When you return, check the current Collection and money display. Then choose whether to open another crate and add a new car. That is a practical routine based on the published loop, without guessing a wallet cap or a daily reset.",
+        "There is no universal permanent hourly rate in the public description. Use the current in-game values for your Collection, especially while the beta changes. Code rewards such as Gems and potions are separate from Collection income."
+      ],
+      "links": [
+        {
+          "slug": "offline-money",
+          "label": "Understand the offline-money loop"
+        }
+      ]
+    },
+    {
+      "id": "dream-car-collection-cars",
+      "heading": "Dream Car Collection Cars",
+      "paragraphs": [
+        "The base game description advertises 50+ shiny, realistic cars, while the official Drive World event says all 67 current cars are drivable during the update. The broad base description and the specific event count fit together: 67 is also more than 50.",
+        "Cars connect several parts of the game. You obtain them through Lucky Crates, add them to the Collection for earnings, and explore advertised features such as racing, cleaning, and the driving event. The current game shows the vehicles available in your session.",
+        "For individual model names, use the live Collection. A public count is useful context, but it should not become an invented list of 67 models, rarities, handling stats, or earnings."
+      ],
+      "links": [
+        {
+          "slug": "cars",
+          "label": "Learn about the car Collection and driving"
+        }
+      ]
+    },
+    {
+      "id": "explore-the-dream-car-collection-wiki",
+      "heading": "Explore the Dream Car Collection Wiki",
+      "paragraphs": [
+        "Choose the guide that answers your next question. Codes provides the active reward table and redemption help. How to Play covers the first sequence, while Lucky Crates and Offline Money explain the two connected sides of progression.",
+        "Drive World focuses on the announced map, drivable-car count, and driving bonus. Cars explains the published count and how vehicles fit into collecting, earnings, racing, and cleaning. Each guide has related links so you can continue to the next topic as you play."
+      ],
+      "links": [
+        {
+          "slug": "codes",
+          "label": "Codes",
+          "description": "Find current Dream Car Collection codes for Roblox, what each code gives, how to redeem codes, and what to try when a code does not work."
+        },
+        {
+          "slug": "drive-world",
+          "label": "Drive World",
+          "description": "See what the Dream Car Collection Drive World update adds, including the massive map, all 67 drivable cars, and the driving Hatch Speed bonus."
+        },
+        {
+          "slug": "how-to-play",
+          "label": "How to Play",
+          "description": "Learn how to play Dream Car Collection on Roblox: open Lucky Crates, collect cars, earn money while offline, race friends, and keep progressing."
+        },
+        {
+          "slug": "lucky-crates",
+          "label": "Lucky Crates",
+          "description": "Learn how Dream Car Collection Lucky Crates work, how to buy, place and open them, how luck boosts fit in, and how crates connect to your car collection."
+        },
+        {
+          "slug": "offline-money",
+          "label": "Offline Money",
+          "description": "Learn how Dream Car Collection offline money works, how adding cars to your Collection generates income, and how to build a simple progression loop."
+        },
+        {
+          "slug": "cars",
+          "label": "Cars",
+          "description": "Learn how cars work in Dream Car Collection, from Lucky Crates and Collection income to Drive World, racing, car cleaning, and current car-count facts."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Dream Car Collection on Roblox?",
+      "answer": "It is a vehicle-collection Simulation game where you open Lucky Crates for cars and add vehicles to a Collection that generates money, including while offline."
+    },
+    {
+      "question": "Who made Dream Car Collection?",
+      "answer": "The Roblox developer group is F Students = Inventors. This wiki is an independent fan-made guide."
+    },
+    {
+      "question": "How do you play Dream Car Collection?",
+      "answer": "Spawn and buy a Lucky Crate, place and open it for a car, add the car to your Collection, and repeat as you build toward your dream cars."
+    },
+    {
+      "question": "Are there Dream Car Collection codes?",
+      "answer": "Yes. The October 3, 2026 active list includes 100XHATCH, LARP, RELEASE, and DISCORDWELCOME. Visit Codes for rewards and redemption steps."
+    },
+    {
+      "question": "What is the Dream Car Collection Drive World update?",
+      "answer": "The official event announces a massive new map, all 67 drivable cars, and x3 Hatch Speed while driving, with an October 2–4, 2026 event window."
+    },
+    {
+      "question": "Does Dream Car Collection make money while you are offline?",
+      "answer": "Yes. The official description confirms offline money generation, and adding cars to the Collection is the earning step in the beginner instructions."
+    },
+    {
+      "question": "How many cars are in Dream Car Collection?",
+      "answer": "The base description advertises 50+ cars. The Drive World event gives the more specific count of 67 drivable cars. Use the in-game Collection for the live roster."
+    },
+    {
+      "question": "Is Dream Car Collection still in beta?",
+      "answer": "Yes. The official Roblox description labels the game beta. Check the live game for current menus and balance values."
+    }
+  ],
+  "screenshots": [],
+  "lastReviewed": "2026-10-03"
+}

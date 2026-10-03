@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+.DS_Store
+*.tsbuildinfo
+.playwright-cli/
+output/playwright/
+release/
+.idea/
+next-env.d.ts
+*.log
