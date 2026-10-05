@@ -1,19 +1,25 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { Fragment, type ReactNode } from "react";
 import type { PageSection } from "@/config/types";
 import { routePath } from "@/lib/urls";
 import { DataTable } from "./data-table";
 
-export function PageSections({ sections }: { sections: PageSection[] }) {
+export function PageSections({ sections, adAfterFirstBlock }: { sections: PageSection[]; adAfterFirstBlock?: ReactNode }) {
   return (
     <div className="space-y-16">
-      {sections.map((section) => (
+      {sections.map((section, sectionIndex) => (
         <section id={section.id} key={section.id} className="scroll-mt-24">
           {section.eyebrow ? <p className="eyebrow">{section.eyebrow}</p> : null}
           <h2>{section.heading}</h2>
           {section.table ? <DataTable table={section.table} /> : null}
+          {sectionIndex === 0 && section.table ? adAfterFirstBlock : null}
           {section.intro ? <p className="section-lead">{section.intro}</p> : null}
-          {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {sectionIndex === 0 && !section.table && section.intro ? adAfterFirstBlock : null}
+          {section.paragraphs?.map((paragraph, index) => <Fragment key={paragraph}>
+            <p>{paragraph}</p>
+            {sectionIndex === 0 && !section.table && !section.intro && index === 0 ? adAfterFirstBlock : null}
+          </Fragment>)}
 
           {section.subsections?.length ? (
             <div className="mt-7 grid gap-5 md:grid-cols-2">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ResponsiveBanner } from "@/components/integrations/responsive-banner";
 
 export const metadata: Metadata = {
   title: { absolute: "Page Not Found" },
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
+    <>
     <main className="site-container grid min-h-[65vh] place-items-center py-20 text-center">
       <div>
         <p className="eyebrow">404</p>
@@ -23,5 +25,7 @@ export default function NotFound() {
         </div>
       </div>
     </main>
+    <ResponsiveBanner />
+    </>
   );
 }

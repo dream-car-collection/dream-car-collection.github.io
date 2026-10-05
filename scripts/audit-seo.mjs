@@ -72,7 +72,13 @@ assert(tags(read('404.html'),'meta').find(m => m.name === 'robots')?.content.inc
 function walk(dir) { return readdirSync(dir).flatMap(name => { const path = join(dir,name); return statSync(path).isDirectory() ? walk(path) : [path]; }); }
 for (const path of walk('out').filter(p => /\.(html|txt|xml|svg|webmanifest)$/.test(p))) {
   const raw = readFileSync(path,'utf8');
-  if (path.endsWith('.html') && /^G-[A-Z0-9]+$/.test(gaId)) {
+  // Banner iframe documents are technical assets, not site page views.
+  const bannerAsset = /^out\/adsterra\/banner-(desktop|mobile)\.html$/.test(path);
+  if (bannerAsset) {
+    assert.equal(raw, readFileSync(path.replace(/^out\//, 'public/'), 'utf8'), `${path}: official banner document copied intact`);
+    assert(tags(raw, 'meta').find(m => m.name === 'robots')?.content.includes('noindex'), `${path}: technical asset is noindex`);
+  }
+  if (path.endsWith('.html') && !bannerAsset && /^G-[A-Z0-9]+$/.test(gaId)) {
     const head = raw.match(/<head>([\s\S]*?)<\/head>/)?.[1];
     assert(head, `${path}: head exists`);
     const loaders = tags(raw, 'script').filter(s => s.src?.startsWith('https://www.googletagmanager.com/gtag/js'));
