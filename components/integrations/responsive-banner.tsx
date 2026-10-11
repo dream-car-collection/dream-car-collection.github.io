@@ -2,7 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { assetPath } from "@/lib/urls";
+import { adsterra } from "@/config/adsterra";
+import { observeAdSlot } from "./ad-slot-status";
+
+const scriptId = "adsterra-responsive-banner";
+type BannerOptions = { key: string; format: "iframe"; height: number; width: number; params: Record<string, never> };
 
 export function ResponsiveBanner({ reserveSpace = true }: { reserveSpace?: boolean } = {}) {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -12,63 +16,57 @@ export function ResponsiveBanner({ reserveSpace = true }: { reserveSpace?: boole
     const host = hostRef.current;
     if (!host) return;
     let disposed = false;
-    let observer: MutationObserver | undefined;
-    let resizeObserver: ResizeObserver | undefined;
+    let stopObserving: (() => void) | undefined;
     let timer: ReturnType<typeof setTimeout> | undefined;
+    let options: BannerOptions | undefined;
+    const adWindow = window as Window & { atOptions?: BannerOptions };
+    const previousOptions = adWindow.atOptions;
 
     // Cancel React Strict Mode's discarded mount before any provider script runs.
     queueMicrotask(() => {
       if (disposed) return;
+      const content = host.querySelector<HTMLElement>("[data-ad-content]");
+      if (!content || document.getElementById(scriptId)) {
+        host.dataset.status = "empty";
+        return;
+      }
+      // Choose once for this page instance. Resizing does not issue a second
+      // impression or race an in-flight desktop script against a mobile one.
       const mobile = !window.matchMedia("(min-width: 768px)").matches;
+      const banner = mobile ? adsterra.mobile : adsterra.desktop;
       host.dataset.status = "pending";
       host.dataset.size = mobile ? "320x50" : "728x90";
-      const frame = document.createElement("iframe");
-      frame.title = "Advertisement";
-      frame.width = mobile ? "320" : "728";
-      frame.height = mobile ? "50" : "90";
-      // A separate document preserves the official parser-time scripts and
-      // document.write semantics, without replacing the Next.js document.
-      frame.src = assetPath(`/adsterra/banner-${mobile ? "mobile" : "desktop"}.html`);
-      const fail = () => {
-        if (disposed) return;
-        host.dataset.status = "empty";
-        frame.remove();
-        observer?.disconnect();
-        resizeObserver?.disconnect();
-        if (timer) clearTimeout(timer);
+
+      // Execute the supplied GET CODE in the real page, in its original order.
+      options = { key: banner.key, format: banner.format, height: banner.height, width: banner.width, params: {} };
+      adWindow.atOptions = options;
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.async = false;
+      script.src = banner.scriptUrl;
+      script.setAttribute(mobile ? "data-adsterra-mobile" : "data-adsterra-desktop", "");
+      script.onerror = () => {
+        if (!disposed && host.dataset.status !== "filled") host.dataset.status = "empty";
       };
-      frame.onerror = fail;
-      frame.onload = () => {
-        const doc = frame.contentDocument;
-        if (!doc) return fail();
-        const check = () => {
-          if (disposed) return;
-          if (doc.documentElement.dataset.adStatus === "error") return fail();
-          const creative = [...doc.querySelectorAll("iframe, img, object, embed")].some((element) => {
-            const rect = element.getBoundingClientRect();
-            return rect.width > 0 && rect.height > 0;
-          });
-          if (!creative && host.dataset.status === "filled") return fail();
-          host.dataset.status = creative ? "filled" : "pending";
-        };
-        observer = new MutationObserver(check);
-        observer.observe(doc.body, { childList: true, subtree: true, attributes: true });
-        resizeObserver = new ResizeObserver(check);
-        resizeObserver.observe(doc.body);
-        check();
-      };
-      host.querySelector("[data-ad-content]")?.appendChild(frame);
+      stopObserving = observeAdSlot(host, content);
+      content.appendChild(script);
+
+      // UI fallback only: release reserved blank space, but keep the script,
+      // provider DOM and observers alive so a late creative can still render.
       timer = setTimeout(() => {
-        if (host.dataset.status !== "filled") fail();
-      }, 15000);
+        if (!disposed && host.dataset.status !== "filled") host.dataset.status = "empty";
+      }, 45000);
     });
 
     return () => {
       disposed = true;
-      observer?.disconnect();
-      resizeObserver?.disconnect();
+      stopObserving?.();
       if (timer) clearTimeout(timer);
       host.querySelector("[data-ad-content]")?.replaceChildren();
+      if (options && adWindow.atOptions === options) {
+        if (previousOptions) adWindow.atOptions = previousOptions;
+        else delete adWindow.atOptions;
+      }
     };
   }, [pathname]);
 

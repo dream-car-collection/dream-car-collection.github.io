@@ -7,7 +7,7 @@ if (integrations.analytics.provider === "google-analytics") {
   privacyServices.push("Google Analytics 4 is enabled to understand aggregate page usage. Google may process technical visit information under its own privacy terms.");
 }
 if (integrations.ads.provider === "adsterra-native") {
-  privacyServices.push("Adsterra Native advertising is enabled. Adsterra may process technical request information and applies its own privacy policy.");
+  privacyServices.push("This website uses Adsterra advertising, including responsive banners, native ads, and a social bar. Adsterra may process technical request information under its own privacy policy.");
 }
 
 function legal(slug: string, navLabel: string, heading: string, lead: string, sections: SeoPageDefinition["sections"], relatedSlugs: string[]): SeoPageDefinition {

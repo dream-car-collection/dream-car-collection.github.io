@@ -10,7 +10,8 @@
     "build:site": "next build --webpack && node scripts/postbuild.mjs",
     "package": "node scripts/package-template.mjs",
     "validate": "node scripts/validate-content.mjs",
-    "audit:seo": "node scripts/audit-seo.mjs"
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "qa:ads": "node scripts/qa-adsterra.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

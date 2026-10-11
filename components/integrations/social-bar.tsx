@@ -13,6 +13,8 @@ export function SocialBar() {
       const script = document.createElement("script");
       script.id = scriptId;
       script.src = adsterra.socialScriptUrl;
+      script.setAttribute("data-cfasync", "false");
+      script.setAttribute("data-adsterra-social", "");
       document.body.appendChild(script);
     });
     // Keep the document-wide script across client navigation. Root layout
